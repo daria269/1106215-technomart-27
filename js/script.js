@@ -1,17 +1,7 @@
 "use strict";
-/* var buypopup = document.querySelector('.modal-cart');
-var close =document.querySelector('.close-button');
 
-buy.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  buypopup.classList.add('modal-cart-show');
-});
 
-close.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  buypopup.classList.remove('modal-cart-show');
-})
-*/
+
 
 
 let mapMini = document.querySelector('.map-mini');
@@ -28,11 +18,10 @@ let closeMap = document.querySelector('.close-map');
 if (closeMap !== null) {
 closeMap.onclick = function() {
   mapMini.style.overflow = 'hidden';
-  console.log('нажата');
 };
 };
 
-let modal = document.querySelector('.modal');
+let modal = document.querySelector('.modal-write-us');
 let writeBtn = document.querySelector('.long-button');
 
 if (writeBtn !== null) {
@@ -58,6 +47,9 @@ let leftButton = document.querySelector('.slide-left');
 let rightButton = document.querySelector('.slide-right');
 let slide1 = document.querySelector('.slide1');
 let slide2 = document.querySelector('.slide2');
+let indicator1 = document.querySelector('.indicator1');
+let indicator2 = document.querySelector('.indicator2');
+
 
 let left = 0;
 let frame = 620;
@@ -73,18 +65,23 @@ rightButton.onclick = moveRight;
 function moveRight() {
   let element = document.querySelector(".slider-field>div:first-child");
   sliderField.appendChild(element);
-  element.classList.add('coming');
+  element.classList.add('for-right');
+  indicator1.classList.toggle('indicator-active');
+  indicator2.classList.toggle('indicator-active');
 
 
 }
 
 function moveLeft() {
-  let element = document.querySelector(".slider-field>div:last-child"),
-    firstElement = document.querySelector(".slider-field>div:first-child");
-  sliderField.insertBefore(element, firstElement);
-  firstElement, element.classList.add('leave');
+  let element = document.querySelector(".slider-field>div:last-child");
+  let firstElement = document.querySelector(".slider-field>div:first-child");
+  sliderField.appendChild(firstElement, element);
+   firstElement,element.classList.add('for-left');
+   indicator2.classList.toggle('indicator-active');
+   indicator1.classList.toggle('indicator-active');
+
+
 }
-// sliderField.style.transition = 'left 0.6s ease';
 
 
 //
@@ -188,3 +185,22 @@ $(function() {
   $("#amount1").val($("#slider-range").slider("values", 0));
   $("#amount2").val($("#slider-range").slider("values", 1));
 });
+
+
+let modalAdded = document.querySelector('.modal-cart');
+let closeButton = document.querySelector('.close-button');
+let buyButton = document.querySelector('.buy');
+let continueShopping = document.querySelector('.continueShopping');
+
+buyButton.onclick= function(){
+  modalAdded.style.display = 'block';
+};
+//работает только с первым селектором
+
+closeButton.onclick = function () {
+  modalAdded.style.display = 'none';
+}
+
+continueShopping.onclick = function () {
+  modalAdded.style.display = 'none';
+}
