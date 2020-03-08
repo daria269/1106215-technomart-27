@@ -189,13 +189,20 @@ $(function() {
 
 let modalAdded = document.querySelector('.modal-cart');
 let closeButton = document.querySelector('.close-button');
-let buyButton = document.querySelector('.buy');
+let buyButton = document.querySelectorAll('.buy');
 let continueShopping = document.querySelector('.continueShopping');
+let cartNumber = document.querySelector('.cart-number');
+let counter = 0;
 
-buyButton.onclick= function(){
-  modalAdded.style.display = 'block';
-};
-//работает только с первым селектором
+
+
+[...buyButton].forEach(buyButton =>
+  buyButton.addEventListener('click', function() {
+    modalAdded.style.display = 'block';
+    counter++;
+    cartNumber.textContent = counter;
+  }));
+
 
 closeButton.onclick = function () {
   modalAdded.style.display = 'none';
@@ -204,3 +211,59 @@ closeButton.onclick = function () {
 continueShopping.onclick = function () {
   modalAdded.style.display = 'none';
 }
+
+let sortPrice = document.querySelector('.sort-price');
+let sortType = document.querySelector('.sort-type');
+let sortFunctional = document.querySelector('.sort-functional');
+
+sortPrice.onclick = function () {
+  sortPrice.classList.add('sorting-active');
+  sortType.classList.remove('sorting-active');
+  sortFunctional.classList.remove('sorting-active');
+};
+sortType.onclick = function () {
+  sortType.classList.add('sorting-active');
+  sortPrice.classList.remove('sorting-active');
+  sortFunctional.classList.remove('sorting-active');
+};
+sortFunctional.onclick = function () {
+  sortFunctional.classList.add('sorting-active');
+  sortPrice.classList.remove('sorting-active');
+  sortType.classList.remove('sorting-active');
+};
+
+let descending = document.querySelector('.descending');
+let ascending = document.querySelector('.ascending');
+
+descending.onclick = function () {
+  descending.classList.add('sorting-active');
+  ascending.classList.remove('sorting-active');
+};
+
+ascending.onclick = function () {
+  descending.classList.remove('sorting-active');
+  ascending.classList.add('sorting-active');
+};
+
+
+let page1 = document.querySelector('.page1');
+let page2 = document.querySelector('.page2');
+let page3 = document.querySelector('.page3');
+
+page1.onclick = function () {
+  page1.classList.add('active-page');
+  page2.classList.remove('active-page');
+  page3.classList.remove('active-page');
+};
+
+page2.onclick = function () {
+  page1.classList.remove('active-page');
+  page2.classList.add('active-page');
+  page3.classList.remove('active-page');
+};
+
+page3.onclick = function () {
+  page1.classList.remove('active-page');
+  page2.classList.remove('active-page');
+  page3.classList.add('active-page');
+};
