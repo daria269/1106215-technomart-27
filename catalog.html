@@ -7,16 +7,12 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <script src='js/script.js' defer></script>
 
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+  <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-
-
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> -->
 
 </head>
 
@@ -25,11 +21,11 @@
 
     <div class='top-nav-container'>
       <div class='top-nav'>
-        <a class='logo' href="index.html"> <img src='img/logo-technomart.svg' width="109px" height="19px" alt='Техномарт'> </a>
+        <a class='logo' href="index.html" title='На главную'> <img src='img/logo-technomart.svg' width="109" height="19" alt='Техномарт'> </a>
 
         <label class='search'>
           <input type="search" placeholder="Поиск:" class='search-field'>
-          <svg class='icon-search' xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" alt='Техномарт'>
+          <svg class='icon-search' xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
             <path fill="inherit"
               d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
           </svg>
@@ -65,7 +61,7 @@
         </div>
 
         <div>
-          <a href="tel:+78125550555" aria-label="Позвонить" class='border-phone'> <img src='img/icon-phone.svg' width='19px' height='19px' alt='Позвонить' class='icon-phone'> +7 (812) 555-05-55 </a>
+          <a href="tel:+78125550555" aria-label="Позвонить" class='border-phone'> <img src='img/icon-phone.svg' width='19' height='19' alt='Позвонить' class='icon-phone'> +7 (812) 555-05-55 </a>
 
           <div class='address'> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </div>
@@ -79,7 +75,7 @@
                   d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" />
               </svg> Равшан Джамшутович
             </a>
-            <a href='#logout' class='logout'> <svg class='icon-logout' alt='Выйти' title="Выйти" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+            <a href='#logout' class='logout'> <svg class='icon-logout' aria-label="Выйти" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
                 <g fill="inherit">
                   <path fill="inherit" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
                   <path fill="inherit" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
@@ -94,7 +90,6 @@
           </ul>
         </div>
       </div>
-
 
       <nav class='container-main-nav'>
         <ul class="main-navigation">
@@ -112,12 +107,11 @@
 
   <main>
     <div class="breadcrumb">
-      <a href="index.html"><img class="icon-home" src='img/icon-home.svg' alt='На главную' title='На главную' width='14px' height='12px'> </a>
+      <a href="index.html"><img class="icon-home" src='img/icon-home.svg' alt='На главную' title='На главную' width='14' height='12'> </a>
       <a href='catalog.html' class='crumb-catalog'>Каталог</a>
       <a href='#' class="crumb-tools">Инструмент </a>
       <a class="crumb-drill">Перфораторы </a>
     </div>
-
 
     <h1 class='catalog-title'> Перфораторы </h1>
 
@@ -134,15 +128,14 @@
             </div>
           </div>
 
-
           <label class='price-diap'>
-            <input type="text" id="amount1" readonly>—
+            <input type="text" id="amount1" readonly><span>—</span>
             <input type="text" id="amount2" readonly>
           </label>
 
         </div>
 
-        <form class='filter'>
+        <form class='filter' method="post" action="https://echo.htmlacademy.ru">
           <div>
             <h2 class='filter-title'> Производители: </h2>
             <ul class='filter-list'>
@@ -199,35 +192,34 @@
         <section class='items'>
 
           <article class='item-card'>
-            <img class="perf" src="img/perf_1.jpg" alt="Перфоратор BOSCH BFG 3000" width='218px' height='170px' title='BFG 3000'>
+            <img class="perf" src="img/perf_1.jpg" alt="Перфоратор BOSCH BFG 3000" width='218' height='170' title='BFG 3000'>
             <h3 class="item-text"> Перфоратор BOSCH <br> BFG 3000 </h3>
             <span class="old-price">22500 Р.</span>
             <span class="price">15500 Р.</span>
             <div class="buy-item">
-              <button class="buy"> <img src='img/icon-cart.svg' width='15px' height='15px' class="icon-cart-buy"> Купить </button>
+              <button class="buy"> <img src='img/icon-cart.svg' width='15' height='15' class="icon-cart-buy"> Купить </button>
               <button class="bookmark"> В закладки </button>
             </div>
           </article>
 
           <article class='item-card'>
-            <img class="perf" src="img/perf_2.jpg" alt="Перфоратор BOSCH BFG 6000" width='218px' height='170px' title='BFG 6000'>
+            <img class="perf" src="img/perf_2.jpg" alt="Перфоратор BOSCH BFG 6000" width='218' height='170' title='BFG 6000'>
             <h3 class="item-text"> Перфоратор BOSCH <br>BFG 6000 </h3>
             <span class="old-price">30500 Р.</span>
             <span class="price">25500 Р.</span>
             <div class="buy-item">
-              <button class="buy"> <img src='img/icon-cart.svg' width='15px' height='15px' class="icon-cart-buy"> Купить </button>
+              <button class="buy"> <img src='img/icon-cart.svg' width='15' height='15' class="icon-cart-buy"> Купить </button>
               <button class="bookmark"> В закладки </button>
             </div>
           </article>
 
           <article class='item-card'>
             <img src="img/new-flag.png" class='new-flag' alt="new">
-            </img>
-            <img class="perf" src="img/perf_3.jpg" alt="Перфоратор BOSCH BFG 2000" width='218px' height='170px' title='BFG 2000'>
+            <img class="perf" src="img/perf_3.jpg" alt="Перфоратор BOSCH BFG 2000" width='218' height='170' title='BFG 2000'>
             <h3 class="item-text"> Перфоратор BOSCH <br>BFG 2000 </h3>
             <span class="price">12500 Р.</span>
             <div class="buy-item">
-              <button class="buy"><img src='img/icon-cart.svg' width='15px' height='15px' class="icon-cart-buy"> Купить </button>
+              <button class="buy"><img src='img/icon-cart.svg' alt='Купить' width='15' height='15' class="icon-cart-buy"> Купить </button>
               <button class="bookmark"> В закладки </button>
             </div>
           </article>
@@ -326,7 +318,7 @@
   <footer>
     <div class='footer'>
       <div сlass='container-footer-logo'>
-        <a class='logo-footer' href="index.html">
+        <a class='logo-footer' href="index.html" title='На главную'>
           <img src='img/logo-technomart.svg' width="136px" height="21px" alt='Техномарт'> </a>
         <p class='footer-address'>
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
@@ -388,7 +380,7 @@
   <div class='modal-cart'>
 
     <div class='red-line'> </div>
-    <button class='close-button'> <img src='img/icon-close.svg' width="21px" height="21px" title="Закрыть"> </button>
+    <button class='close-modal-cart'> <img src='img/icon-close.svg' width="21px" height="21px" title="Закрыть"> </button>
     <div class='added'>
       <img src='img/icon-mark.svg' width="66px" height="66px" class='green-mark'>
       Товар добавлен в корзину!
@@ -399,6 +391,8 @@
       <button class='white-button continueShopping'> Продолжить покупки </button>
     </div>
   </div>
+
+  <script src='js/script-catalog.js' defer></script>
 
 </body>
 

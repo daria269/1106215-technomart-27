@@ -509,15 +509,14 @@ h1, h2 {
   left: 0;
   display: flex;
 }
+
 .container-indicator {
   position: absolute;
   top: 220px;
   left: 295px;
   z-index: 5;
   display: flex;
-
 }
-
 
 .indicator1,
 .indicator2 {
@@ -528,9 +527,10 @@ h1, h2 {
   background-color: #fff;
   box-sizing: border-box;
   margin-right: 10px;
-
+  cursor: pointer;
 }
-.indicator-active{
+
+.indicator-active {
   border: 2px solid #fff;
   border-radius: 50%;
   background-color: #ee3643;
@@ -538,36 +538,41 @@ h1, h2 {
 
 .slide1 {
   position: relative;
-
 }
 
 .slide2 {
   position: relative;
-
 }
 
-.for-left {
-   animation: left 1s ease ;
+/* .for-left {
+  animation: left 1s ease;
 }
+
 .for-right {
-    animation: right 1s ease ;
+  animation: right 1s ease;
+}
 
-}
 @keyframes left {
-  from{ transform: translateX(620px);
-    opacity:1;
+  from {
+    transform: translateX(620px);
+    opacity: 1;
   }
-  to { transform: translateX(0px);
-    opacity:1;
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
-/*да как этот слайдер сделать?? */
+
 @keyframes right {
-  from{ transform: translateX(-620px);
+  from {
+    transform: translateX(-620px);
   }
-  to { transform: translateX(0px);
+
+  to {
+    transform: translateX(0px);
   }
-}
+} */
 
 .slide-about {
   position: absolute;
@@ -607,7 +612,7 @@ h1, h2 {
 .slide-right:hover,
 .slide-left:hover,
 .slide-left:focus,
-.slide-right:focus{
+.slide-right:focus {
   cursor: pointer;
   opacity: 0.7;
   outline: none;
@@ -756,6 +761,7 @@ h1, h2 {
   padding: 0;
   background: url('img/credit-icon.png') no-repeat bottom right;
 }
+
 .credit-button {
   width: 195px;
   margin-top: 25px;
@@ -781,7 +787,8 @@ h1, h2 {
   flex-direction: column;
 }
 
-.service-list li {
+.service-list button {
+  width: 100%;
   font-family: 'Cuprum', sans-serif;
   font-size: 21px;
   line-height: 30px;
@@ -798,14 +805,15 @@ h1, h2 {
   border: 1px solid #405069;
 }
 
-.service-list li:hover,
-.service-list li:active,
-.service-list li:focus {
+.service-list button:hover,
+.service-list button:active,
+.service-list button:focus {
   background-color: #ffffff;
   color: #32425c;
   box-shadow: none;
   border: #ffffff;
   cursor: pointer;
+  outline: none;
 }
 
 .delivery {
@@ -1003,7 +1011,6 @@ h1, h2 {
 .button-send {
   width: 460px;
   margin: 0;
-
 }
 
 @keyframes modal {
@@ -1604,7 +1611,8 @@ input[type="checkbox"]:disabled+.checkbox {
 .top-nav-container {
   width: 100%;
   background-color: #293449;
-  height: 42px margin: 0 auto;
+  height: 42px;
+  margin: 0 auto;
   display: flex;
 }
 
@@ -1870,7 +1878,6 @@ ul .sorting-active {
   width: 150px;
   height: 100%;
   text-align: center;
-  padding: ;
   display: flex;
   align-items: center;
   margin: 0;
@@ -2040,6 +2047,7 @@ ul .sorting-active {
   justify-content: center;
 }
 
+.close-modal-cart,
 .close-button {
   width: 21px;
   height: 21px;
@@ -2050,6 +2058,8 @@ ul .sorting-active {
   top: 15px;
 }
 
+.close-modal-cart:active,
+.close-modal-cart:hover,
 .close-button:active,
 .close-button:hover {
   outline: none;
@@ -2060,6 +2070,11 @@ ul .sorting-active {
   margin-right: 31px;
   margin-left: 80px;
 }
+button a {
+  width: 100%;
+  height: 100%;
+}
+
 
 .range-field {
   display: flex;
@@ -2088,12 +2103,13 @@ ul .sorting-active {
   margin: 8px 0;
   border-radius: 3px;
 }
+
 .price-container {
   width: 220px;
   margin-bottom: 25px;
 }
 
-#amount1, #amount2  {
+#amount1, #amount2 {
   width: 95px;
   height: 38px;
   background: #f7f3ec;
@@ -2118,18 +2134,16 @@ ul .sorting-active {
   background-color: #00ca74;
 }
 
-
 #slider-range .ui-slider-handle {
-    width: 20px;
-    height: 20px;
-  border-radius:50%;
-  border:none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
   background-color: #fff;
   box-shadow: inset 0px -2px 0 0 #e0ddd8;
   top: -0.5em;
   cursor: pointer;
 }
-
 
 #slider-range .ui-slider-handle:active,
 #slider-range .ui-slider-handle:focus {
