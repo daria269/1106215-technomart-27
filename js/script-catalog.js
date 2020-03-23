@@ -158,18 +158,27 @@ let page3 = document.querySelector(".page3");
 
 page1.onclick = function() {
   page1.classList.add("active-page");
+  page1.classList.remove("page-number");
   page2.classList.remove("active-page");
   page3.classList.remove("active-page");
+  page3.classList.add("page-number");
+  page2.classList.add("page-number");
+
 };
 
 page2.onclick = function() {
   page1.classList.remove("active-page");
+  page1.classList.add("page-number");
   page2.classList.add("active-page");
+  page2.classList.remove("page-number");
   page3.classList.remove("active-page");
 };
 
 page3.onclick = function() {
   page1.classList.remove("active-page");
   page2.classList.remove("active-page");
+  page2.classList.add("page-number");
+  page1.classList.add("page-number");
+  page3.classList.remove("page-number");
   page3.classList.add("active-page");
 };

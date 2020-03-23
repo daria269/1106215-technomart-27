@@ -7,6 +7,14 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <style>  @font-face {
+font-family: "MS Sans serif";
+src: url("Microsoft Sans Serif.ttf") format('truetype');
+font-style: normal;
+font-weight: normal;
+}
+</style>
+
 </head>
 
 <body>
@@ -92,7 +100,7 @@
           <a href="#" class="btn-in-block">На любой вкус </a>
           </div>
           <div class="tin-paint"> <img src="img/icon-1.svg" width="44" height="65" alt="Материалы">
-            <img class="new-flag-block" src="img/new-flag.png" alt="New">
+            <img class="new-flag-block" src="img/new-flag.png" width="60" height="59" alt="New">
           </div>
         </div>
 
@@ -117,12 +125,10 @@
 
         <div class="slider">
           <button class="slide-right"> <img src="img/icon-right.svg" width="22" height="40" alt="next"> </button>
-
           <button class="slide-left"> <img src="img/icon-left.svg" width="22" height="40" alt="prev"> </button>
 
-          <button class="red-button slider-button" type="button"> Открыть каталог </button>
+          <a href="catalog.html" class="red-button slider-button">Открыть каталог</a>
           <div class="container-indicator">
-
             <div class="indicator1 indicator-active"> </div>
             <div class="indicator2"> </div>
           </div>
@@ -171,7 +177,7 @@
       <div class="section-header">
         <h3> Популярные товары:
         </h3>
-        <a href="#" class="red-button">Все популярные товары</a>
+        <a href="#" class="red-button button-in-section">Все популярные товары</a>
       </div>
 
       <div class="popular-items">
@@ -210,7 +216,7 @@
         </article>
 
         <article class="item-card">
-          <img src="img/new-flag.png" class="new-flag" alt="new">
+          <img src="img/new-flag.png" class="new-flag" width="60" height="59" alt="new">
 
           <img class="perf" src="img/perf_3.jpg" alt="Перфоратор BOSCH BFG 2000" width="218" height="170" title="BFG 2000">
           <h3 class="item-text"> Перфоратор BOSCH <br> BFG 2000 </h3>
@@ -226,7 +232,7 @@
       <div class="section-header">
         <h3> Популярные производители:
         </h3>
-        <a href="#" class="red-button">Все производители</a>
+        <a href="#" class="red-button button-in-section">Все производители</a>
       </div>
 
       <ul class="popular-companies">
@@ -291,9 +297,9 @@
           Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
       </div>
-      <div class="service-detail delivery-icon">
+      <div class="service-detail delivery-icon-bg">
         <ul class="service-list">
-          <li id="delivery-li"><button>Доставка </button> </li>
+          <li id="delivery-li" class="active-li"> <button>Доставка </button> </li>
           <li id="guarantee-li"><button>Гарантия </button> </li>
           <li id="credit-li"><button>Кредит </button> </li>
         </ul>
@@ -332,7 +338,7 @@
           <li> ЖелДорЭкспедиция </li>
         </ul>
       </div>
-      <a href="#" class="red-button"> Подробнее о компании </a>
+      <a href="#" class="red-button button-about-company">Подробнее о компании</a>
     </section>
     <section class="about">
       <h2> Контакты </h2>
@@ -340,13 +346,11 @@
         заехав в наш офис:
       </p>
       <div class="divMap map-mini">
-        <!--<a  href="#"-->
-
-        <img class="map-open" src="img/map.png" width="970" height="476" alt="Мы на карте" title="Схема проезда">
+        <a class="map-open"> <img src="img/map.png" width="970" height="476" alt="Мы на карте" title="Схема проезда"> </a>
         <button class="close-map" aria-label="Закрыть"> <img src="img/icon-close.svg" width="21" height="21" title="Закрыть" alt="Закрыть">
         </button>
       </div>
-      <div><button type="button" class="red-button long-button"> Заблудились? Напишите нам!</button>
+      <div><a class="red-button button-write-us"> Заблудились? Напишите нам!</a>
       </div>
     </section>
   </div>
@@ -370,6 +374,7 @@
           <li> <a href="catalog.html">Каталог</a> </li>
           <li> <a href="#"> Доставка </a></li>
           <li> <a href="#">Контакты </a></li>
+          <li> <a href="#"> Доставка </a></li>
         </ul>
         <ul class="beige-list">
           <li> <a href="#">Материалы</a> </li>
@@ -422,14 +427,14 @@
     <form class="write-us" method="post" action="https://echo.htmlacademy.ru">
       <div class="container-input">
         <label> Ваше имя: <br>
-          <input type="text" required name="name" value="" placeholder="Имя Фамилия">
+          <input type="text" required name="name" placeholder="Имя Фамилия"  value="">
         </label>
         <label> Ваш e-mail: <br>
-          <input type="text" required name="email" value="" placeholder="email@example.com">
+          <input type="text" required name="email"  placeholder="email@example.com" value="">
         </label>
       </div>
       <label class="text-field"> Текст письма: <br>
-        <textarea name="text" placeholder="В свободной форме" required></textarea>
+        <textarea  name="text" required placeholder="В свободной форме" value=""></textarea>
       </label>
       <div class="btn-background">
         <button type="submit" class="red-button button-send"> Отправить </button>

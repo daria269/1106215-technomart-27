@@ -19,7 +19,7 @@ if (closeMap !== null) {
 };
 
 let modal = document.querySelector(".modal-write-us");
-let writeBtn = document.querySelector(".long-button");
+let writeBtn = document.querySelector(".button-write-us");
 
 if (writeBtn !== null) {
   writeBtn.onclick = function() {
@@ -31,6 +31,17 @@ let closeModal = document.querySelector(".close-button");
 closeModal.onclick = function() {
   modal.style.display = "none";
 };
+
+let form = document.querySelector(".write-us");
+
+form.addEventListener('submit', function (evt){
+if(!name.value || !email.value || !text.value){
+evt.preventDefault();
+modal.classList.remove('modal-error');
+// modal.offsetWidth = modal.offsetWidth;
+modal.classList.add('modal-error');
+}
+});
 
 /* window.onclick = function(event) {
   if (event.target == modal) {
@@ -98,13 +109,10 @@ function showDelivery() {
   deliveryDiv.style.display = "block";
   background.classList.remove("guarantee-icon");
   background.classList.remove("credit-icon");
-  background.classList.add("delivery-icon");
-  deliveryBtn.style.backgroundColor = "#ffffff";
-  deliveryBtn.style.color = "#32425c";
-  deliveryBtn.style.boxShadow = "none";
-  deliveryBtn.style.border = "#ffffff";
-  guarantBtn.style = "none";
-  creditBtn.style = "none";
+  background.classList.add("delivery-icon-bg");
+  deliveryBtn.classList.add("active-li");
+  guarantBtn.classList.remove("active-li");
+  creditBtn.classList.remove("active-li");
 }
 
 function showGuarant() {
@@ -112,15 +120,12 @@ function showGuarant() {
   deliveryDiv.style.display = "none";
   creditDiv.style.display = "none";
   guarantDiv.style.display = "block";
-  background.classList.remove("delivery-icon");
+  background.classList.remove("delivery-icon-bg");
   background.classList.remove("credit-icon");
   background.classList.add("guarantee-icon");
-  guarantBtn.style.backgroundColor = "#ffffff";
-  guarantBtn.style.color = "#32425c";
-  guarantBtn.style.boxShadow = "none";
-  guarantBtn.style.border = "#ffffff";
-  deliveryBtn.style = "none";
-  creditBtn.style = "none";
+  guarantBtn.classList.add("active-li");
+  deliveryBtn.classList.remove("active-li");
+  creditBtn.classList.remove("active-li");
 
 }
 
@@ -129,15 +134,12 @@ function showCredit() {
   deliveryDiv.style.display = "none";
   guarantDiv.style.display = "none";
   creditDiv.style.display = "block";
-  background.classList.remove("delivery-icon");
+  background.classList.remove("delivery-icon-bg");
   background.classList.add("credit-icon");
   background.classList.remove("guarantee-icon");
-  creditBtn.style.backgroundColor = "#ffffff";
-  creditBtn.style.color = "#32425c";
-  creditBtn.style.boxShadow = "none";
-  creditBtn.style.border = "#ffffff";
-  deliveryBtn.style = "none";
-  guarantBtn.style = "none";
+  creditBtn.classList.add("active-li");
+  deliveryBtn.classList.remove("active-li");
+  guarantBtn.classList.remove("active-li");
 }
 
 
