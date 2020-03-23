@@ -1,26 +1,40 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-let thumbLeft = document.querySelector(".range-thumb-left");
-let thumbRight = document.querySelector(".range-thumb-right");
-let sliderRange = document.querySelector("#slider-range");
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-thumbLeft.onmousedown = function(event) {
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var thumbLeft = document.querySelector(".range-thumb-left");
+var thumbRight = document.querySelector(".range-thumb-right");
+var sliderRange = document.querySelector("#slider-range");
+
+thumbLeft.onmousedown = function (event) {
   event.preventDefault();
-  let shiftX = event.clientX - thumbLeft.getBoundingClientRect().left;
+  var shiftX = event.clientX - thumbLeft.getBoundingClientRect().left;
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mouseup", onMouseUp);
 
   function onMouseMove(event) {
-    let newLeft = event.clientX - shiftX - sliderRange.getBoundingClientRect().left;
-    //оставить бегунок в  границах.
+    var newLeft = event.clientX - shiftX - sliderRange.getBoundingClientRect().left; //оставить бегунок в  границах.
+
     if (newLeft < 0) {
       newLeft = 0;
     }
-    let rightEdge = document.offsetWidth - thumbLeft.offsetWidth;
+
+    var rightEdge = document.offsetWidth - thumbLeft.offsetWidth;
+
     if (newLeft > rightEdge) {
       newLeft = rightEdge;
     }
+
     thumbLeft.style.left = newLeft + "px";
   }
 
@@ -30,22 +44,25 @@ thumbLeft.onmousedown = function(event) {
   }
 };
 
-thumbRight.onmousedown = function(event) {
+thumbRight.onmousedown = function (event) {
   event.preventDefault();
-  let shiftX = event.clientX - thumbRight.getBoundingClientRect().left;
+  var shiftX = event.clientX - thumbRight.getBoundingClientRect().left;
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mouseup", onMouseUp);
 
   function onMouseMove(event) {
-    let newLeft = event.clientX - shiftX - sliderRange.getBoundingClientRect().left;
-    //оставить бегунок в  границах.
+    var newLeft = event.clientX - shiftX - sliderRange.getBoundingClientRect().left; //оставить бегунок в  границах.
+
     if (newLeft < 0) {
       newLeft = 0;
     }
-    let rightEdge = document.offsetWidth - thumbRight.offsetWidth;
+
+    var rightEdge = document.offsetWidth - thumbRight.offsetWidth;
+
     if (newLeft > rightEdge) {
       newLeft = rightEdge;
     }
+
     thumbRight.style.left = newLeft + "px";
   }
 
@@ -53,17 +70,15 @@ thumbRight.onmousedown = function(event) {
     document.removeEventListener("mouseup", onMouseUp);
     document.removeEventListener("mousemove", onMouseMove);
   }
-
 };
 
-thumbLeft.ondragstart = function() {
-  return false;
-};
-thumbRight.ondragstart = function() {
+thumbLeft.ondragstart = function () {
   return false;
 };
 
-// $(function() {
+thumbRight.ondragstart = function () {
+  return false;
+}; // $(function() {
 //   $("#slider-range").slider({
 //     range: true,
 //     min: 0,
@@ -79,48 +94,50 @@ thumbRight.ondragstart = function() {
 // });
 
 
-let modalAdded = document.querySelector(".modal-cart");
-let closeButton = document.querySelector(".close-modal-cart");
-let buyButton = document.querySelectorAll(".buy");
-let continueShopping = document.querySelector(".continueShopping");
-let cartNumber = document.querySelector(".cart-number");
-let counter = 0;
+var modalAdded = document.querySelector(".modal-cart");
+var closeButton = document.querySelector(".close-modal-cart");
+var buyButton = document.querySelectorAll(".buy");
+var continueShopping = document.querySelector(".continueShopping");
+var cartNumber = document.querySelector(".cart-number");
+var counter = 0;
 
-
-
-[...buyButton].forEach(buyButton =>
-  buyButton.addEventListener("click", function() {
+_toConsumableArray(buyButton).forEach(function (buyButton) {
+  return buyButton.addEventListener("click", function () {
     modalAdded.style.display = "block";
+
     if (cartNumber !== null) {
       counter++;
       cartNumber.textContent = counter;
-    };
-  }));
+    }
 
+    ;
+  });
+});
 
-closeButton.onclick = function() {
+closeButton.onclick = function () {
   modalAdded.style.display = "none";
-}
+};
 
 if (continueShopping !== null) {
-  continueShopping.onclick = function() {
+  continueShopping.onclick = function () {
     modalAdded.style.display = "none";
   };
 }
 
-let sortPrice = document.querySelector(".sort-price");
-let sortType = document.querySelector(".sort-type");
-let sortFunctional = document.querySelector(".sort-functional");
+var sortPrice = document.querySelector(".sort-price");
+var sortType = document.querySelector(".sort-type");
+var sortFunctional = document.querySelector(".sort-functional");
 
 if (sortPrice !== null) {
-  sortPrice.onclick = function() {
+  sortPrice.onclick = function () {
     sortPrice.classList.add("sorting-active");
     sortType.classList.remove("sorting-active");
     sortFunctional.classList.remove("sorting-active");
   };
 }
+
 if (sortType !== null) {
-  sortType.onclick = function() {
+  sortType.onclick = function () {
     sortType.classList.add("sorting-active");
     sortPrice.classList.remove("sorting-active");
     sortFunctional.classList.remove("sorting-active");
@@ -128,45 +145,44 @@ if (sortType !== null) {
 }
 
 if (sortFunctional !== null) {
-  sortFunctional.onclick = function() {
+  sortFunctional.onclick = function () {
     sortFunctional.classList.add("sorting-active");
     sortPrice.classList.remove("sorting-active");
     sortType.classList.remove("sorting-active");
   };
 }
 
-let descending = document.querySelector(".descending");
-let ascending = document.querySelector(".ascending");
+var descending = document.querySelector(".descending");
+var ascending = document.querySelector(".ascending");
 
 if (descending !== null) {
-  descending.onclick = function() {
+  descending.onclick = function () {
     descending.classList.add("sorting-active");
     ascending.classList.remove("sorting-active");
   };
 }
+
 if (ascending !== null) {
-  ascending.onclick = function() {
+  ascending.onclick = function () {
     descending.classList.remove("sorting-active");
     ascending.classList.add("sorting-active");
   };
 }
 
+var page1 = document.querySelector(".page1");
+var page2 = document.querySelector(".page2");
+var page3 = document.querySelector(".page3");
 
-let page1 = document.querySelector(".page1");
-let page2 = document.querySelector(".page2");
-let page3 = document.querySelector(".page3");
-
-page1.onclick = function() {
+page1.onclick = function () {
   page1.classList.add("active-page");
   page1.classList.remove("page-number");
   page2.classList.remove("active-page");
   page3.classList.remove("active-page");
   page3.classList.add("page-number");
   page2.classList.add("page-number");
-
 };
 
-page2.onclick = function() {
+page2.onclick = function () {
   page1.classList.remove("active-page");
   page1.classList.add("page-number");
   page2.classList.add("active-page");
@@ -174,7 +190,7 @@ page2.onclick = function() {
   page3.classList.remove("active-page");
 };
 
-page3.onclick = function() {
+page3.onclick = function () {
   page1.classList.remove("active-page");
   page2.classList.remove("active-page");
   page2.classList.add("page-number");

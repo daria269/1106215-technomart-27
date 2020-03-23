@@ -30,6 +30,7 @@ a {
   padding-bottom: 40px;
   width: 940px;
   margin: 0 auto;
+  display: flex;
 }
 
 .filter li {
@@ -45,7 +46,7 @@ a {
 }
 
 .top-nav {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -86,7 +87,7 @@ a {
 }
 
 input[type="search"] {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   background: transparent;
@@ -110,23 +111,41 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .main-navigation {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
   background-color: #32425c;
   padding-left: 23px;
   padding-right: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 60px;
+  box-shadow: inset 0 -5px 0 0 #293449;
+  align-items: center;
+  margin-top: 0;
+  width: 100%;
+}
+
+.main-nav-a:hover {
+  background-color: #293449;
+}
+
+.main-nav-a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .main-navigation a {
-  padding: 20px 30px;
+  padding: 20px;
 }
 
 .icon {}
 
 .description {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -136,7 +155,7 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .address {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
@@ -153,7 +172,7 @@ input[type="search"]::-ms-input-placeholder {
 .border-phone {
   width: 264px;
   height: 39px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -169,7 +188,7 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .login {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
@@ -181,7 +200,7 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .login-name {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
@@ -253,7 +272,7 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 .login-reg {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
@@ -273,7 +292,7 @@ input[type="search"]::-ms-input-placeholder {
 }
 
 h1, h2 {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial,sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -288,7 +307,7 @@ h1, h2 {
   font-family: inherit;
   font-size: 13px;
   line-height: 24px;
-  margin-top: 18px;
+  margin-top: 20px;
   margin-bottom: 18px;
 }
 
@@ -298,28 +317,32 @@ h1, h2 {
 }
 
 .list {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
 }
 
 .red-button {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   border: none;
   border-radius: 3px;
-  white-space: nowrap;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .button-in-modal {
   min-width: 220px;
   height: 38px;
+  margin-right: 20px;
 }
 
 .button-in-section {
@@ -339,7 +362,7 @@ h1, h2 {
 }
 
 .section-blocks {
-  margin: 59px auto 0;
+  margin: 62px auto 0;
   width: 940px;
   height: 409px;
   display: flex;
@@ -356,7 +379,7 @@ h1, h2 {
   width: 300px;
   height: 123px;
   background-color: #ffbf47;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -385,7 +408,7 @@ h1, h2 {
   width: 135px;
   height: 38px;
   display: flex;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -416,7 +439,7 @@ h1, h2 {
   width: 300px;
   height: 123px;
   background-color: #3bbce3;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -439,7 +462,7 @@ h1, h2 {
   width: 300px;
   height: 123px;
   background-color: #dc91d8;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -475,7 +498,7 @@ h1, h2 {
   width: 300px;
   height: 123px;
   background-color: #8ed78f;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -498,7 +521,7 @@ h1, h2 {
   width: 300px;
   height: 123px;
   background-color: #ffc047;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -597,7 +620,7 @@ h1, h2 {
 
 .slide-about {
   position: absolute;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
@@ -662,7 +685,7 @@ h1, h2 {
 }
 
 .section-header h3 {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -737,13 +760,13 @@ h1, h2 {
 
 .service-header {
   width: 940px;
-  padding-top: 68px;
+  padding-top: 65px;
   padding-bottom: 64px;
   margin: 0 auto;
 }
 
 .service-header h3 {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
@@ -752,11 +775,11 @@ h1, h2 {
 }
 
 .service-header p {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Helvetica, sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-bottom: 0;
 }
 
@@ -791,7 +814,7 @@ h1, h2 {
 }
 
 .service-detail h4 {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -801,11 +824,11 @@ h1, h2 {
 }
 
 .service-list {
-  width: 240px;
-  height: 183px;
+  width: 222px;
+  /* height: 185px; */
   list-style-type: none;
   padding: 0;
-  margin: 0 80px 0 0;
+  margin: 0 98px 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -817,7 +840,7 @@ h1, h2 {
 }
 .service-list li {
   width: 100%;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial,sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -827,7 +850,7 @@ h1, h2 {
   margin: 0;
   display: flex;
   align-items: center;
-  padding-left: 22px;
+  padding-left: 15px;
   /* box-shadow: inset 0 1px 1px rgba(64, 80, 105, 1); */
   box-shadow: inset -4px 2px 3px rgba(41, 52, 73, 1);
   border: 1px solid #405069;
@@ -875,7 +898,7 @@ h1, h2 {
 
 .map-mini {
   overflow: hidden;
-  margin-top: 25px;
+  margin-top: 23px;
   margin-bottom: 33px;
   position: relative;
 }
@@ -907,12 +930,12 @@ h1, h2 {
 }
 
 .footer {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
   background-color: #32425c;
-  /* height: 193px; */
+  min-height: 193px;
 }
 
 .beige {
@@ -925,13 +948,15 @@ h1, h2 {
 }
 
 .bottom {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
+  min-height: 110px;
   color: #ffffff;
   background-color: #293449;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .icon-footer {
@@ -949,11 +974,11 @@ h1, h2 {
   display: flex;
   justify-content: space-between;
   margin-right: 15px;
-  width: 300px;
+  width: 285px;
 }
 
 .modal-write-us {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
   width: 620px;
@@ -974,7 +999,7 @@ h1, h2 {
 
 
 .write-us input {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans",Helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #a9a9a9;
@@ -1025,7 +1050,7 @@ h1, h2 {
   width: 460px;
   height: 115px;
   margin-top: 10px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #a9a9a9;
@@ -1078,7 +1103,7 @@ h1, h2 {
 
 .underline-orders {
   text-decoration: underline;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
@@ -1089,7 +1114,7 @@ h1, h2 {
 
 .underline-2 {
   text-decoration: underline;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial,sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
@@ -1193,6 +1218,7 @@ h1, h2 {
   border-radius: 2px;
   width: 140px;
   height: 38px;
+  margin-top: 60px;
 }
 
 .button-form:hover,
@@ -1341,6 +1367,7 @@ input[type="checkbox"]:disabled+.checkbox {
 
 .filter-list {
   padding-left: 0;
+  margin-top: 3px;
 }
 
 .filter-title::before {
@@ -1351,7 +1378,9 @@ input[type="checkbox"]:disabled+.checkbox {
   display: block;
   margin-bottom: 15px;
 }
-
+.container-filter-radio {
+  margin-top: 18px;
+}
 .new-flag {
   position: absolute;
   left: 159px;
@@ -1367,7 +1396,7 @@ input[type="checkbox"]:disabled+.checkbox {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #e5e5e5;
   margin-top: 0px;
@@ -1383,7 +1412,7 @@ input[type="checkbox"]:disabled+.checkbox {
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-  width: 122px;
+  width: 124px;
   height: 38px;
   background-color: #ee3643;
   border-radius: 3px;
@@ -1416,13 +1445,15 @@ input[type="checkbox"]:disabled+.checkbox {
   color: #999999;
   text-decoration: line-through;
 }
-
+.unvisible {
+  opacity: 0;
+}
 .item-text {
   font-family: inherit;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
-  margin: 3px auto 13px;
+  margin: 7px auto 11px;
 }
 
 .icon-cart-buy {
@@ -1461,7 +1492,7 @@ input[type="checkbox"]:disabled+.checkbox {
   justify-content: flex-start;
   width: 135px;
   height: 38px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -1507,7 +1538,7 @@ input[type="checkbox"]:disabled+.checkbox {
   width: 135px;
   height: 38px;
   border-radius: 3px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum",Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -1535,7 +1566,7 @@ input[type="checkbox"]:disabled+.checkbox {
 }
 
 .white-button {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -1709,25 +1740,6 @@ input[type="checkbox"]:disabled+.checkbox {
   list-style-type: none;
 }
 
-.main-navigation {
-  display: flex;
-  flex-direction: row;
-  height: 60px;
-  box-shadow: inset 0 -5px 0 0 #293449;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 0;
-}
-
-.main-nav-a:hover {
-  background-color: #293449;
-}
-
-.main-nav-a:active {
-  background-color: #1d2739;
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .section-container {
   display: flex;
   flex-direction: row;
@@ -1822,6 +1834,7 @@ footer {
   display: flex;
   align-items: center;
   width: 230px;
+  margin-right: 50px;
 }
 
 .container-profile {
@@ -1853,7 +1866,7 @@ footer {
 }
 
 .filter-heading {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
@@ -1879,7 +1892,7 @@ footer {
 
 .ul-sorting a {
   margin-left: 0px;
-  margin-right: 55px;
+  margin-right: 54px;
   color: #c5c5c5;
   border-bottom: #ee3643 1px dotted;
   line-height: 18px;
@@ -1934,11 +1947,12 @@ ul .sorting-active {
 .some-words {
   width: 940px;
   margin: 0 auto;
-  padding: 67px 0;
+  padding: 67px 0 55px;
+  margin-top: 46px;
 }
 
 .some-words-title {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -1981,6 +1995,7 @@ ul .sorting-active {
   justify-content: flex-start;
   padding-left: 0;
   list-style-type: none;
+  margin-top: 33px;
 }
 
 .page-number {
@@ -2096,7 +2111,7 @@ ul .sorting-active {
   transform: translate(-50%, -50%);
   animation: modal 0.4s 1 ease;
   box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
-  z-index: 2;
+  z-index: 80;
   display: none;
 }
 
@@ -2109,7 +2124,7 @@ ul .sorting-active {
 .added {
   width: 100%;
   height: 168px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   display: flex;
