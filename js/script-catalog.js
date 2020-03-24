@@ -101,18 +101,16 @@ var continueShopping = document.querySelector(".continueShopping");
 var cartNumber = document.querySelector(".cart-number");
 var counter = 0;
 
-_toConsumableArray(buyButton).forEach(function (buyButton) {
-  return buyButton.addEventListener("click", function () {
-    modalAdded.style.display = "block";
+for (var t = 0; t < buyButton.length; t++) {
+buyButton[t].addEventListener("click", function () {
+modalAdded.style.display = "block";
 
-    if (cartNumber !== null) {
-      counter++;
-      cartNumber.textContent = counter;
-    }
-
-    ;
-  });
+if (cartNumber !== null) {
+counter++;
+cartNumber.textContent = counter;
+}
 });
+}
 
 closeButton.onclick = function () {
   modalAdded.style.display = "none";
