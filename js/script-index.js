@@ -153,21 +153,7 @@ function showCredit() {
   creditBtn.classList.add("active-li");
   deliveryBtn.classList.remove("active-li");
   guarantBtn.classList.remove("active-li");
-} // $(function() {
-//   $("#slider-range").slider({
-//     range: true,
-//     min: 0,
-//     max: 35000,
-//     values: [0, 30000],
-//     slide: function(event, ui) {
-//       $("#amount1").val(ui.values[0]);
-//       $("#amount2").val(ui.values[1]);
-//     }
-//   });
-//   $("#amount1").val($("#slider-range").slider("values", 0));
-//   $("#amount2").val($("#slider-range").slider("values", 1));
-// });
-
+}
 
 var modalAdded = document.querySelector(".modal-cart");
 var closeButton = document.querySelector(".close-modal-cart");
