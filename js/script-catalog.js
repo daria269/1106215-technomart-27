@@ -129,6 +129,9 @@ var sortFunctional = document.querySelector(".sort-functional");
 if (sortPrice !== null) {
   sortPrice.onclick = function () {
     sortPrice.classList.add("sorting-active");
+    sortPrice.classList.remove("sort-a");
+    sortType.classList.add("sort-a");
+    sortFunctional.classList.add("sort-a");
     sortType.classList.remove("sorting-active");
     sortFunctional.classList.remove("sorting-active");
   };
@@ -137,6 +140,9 @@ if (sortPrice !== null) {
 if (sortType !== null) {
   sortType.onclick = function () {
     sortType.classList.add("sorting-active");
+    sortType.classList.remove("sort-a");
+    sortPrice.classList.add("sort-a");
+    sortFunctional.classList.add("sort-a");
     sortPrice.classList.remove("sorting-active");
     sortFunctional.classList.remove("sorting-active");
   };
@@ -145,6 +151,9 @@ if (sortType !== null) {
 if (sortFunctional !== null) {
   sortFunctional.onclick = function () {
     sortFunctional.classList.add("sorting-active");
+    sortFunctional.classList.remove("sort-a");
+    sortType.classList.add("sort-a");
+    sortPrice.classList.add("sort-a");
     sortPrice.classList.remove("sorting-active");
     sortType.classList.remove("sorting-active");
   };
@@ -156,6 +165,8 @@ var ascending = document.querySelector(".ascending");
 if (descending !== null) {
   descending.onclick = function () {
     descending.classList.add("sorting-active");
+    descending.classList.remove("icon-dir");
+    ascending.classList.add("icon-dir");
     ascending.classList.remove("sorting-active");
   };
 }
@@ -163,6 +174,8 @@ if (descending !== null) {
 if (ascending !== null) {
   ascending.onclick = function () {
     descending.classList.remove("sorting-active");
+    descending.classList.add("icon-dir");
+    ascending.classList.remove("icon-dir");
     ascending.classList.add("sorting-active");
   };
 }

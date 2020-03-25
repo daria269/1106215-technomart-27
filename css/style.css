@@ -1893,15 +1893,19 @@ footer {
 .ul-sorting a {
   margin-left: 0px;
   margin-right: 54px;
-  color: #c5c5c5;
-  border-bottom: #ee3643 1px dotted;
   line-height: 18px;
 }
+
+
 .ul-sorting li {
   flex-shrink: 0;
 }
+.sort-a {
+  color: #c5c5c5;
+  border-bottom: #ee3643 1px dotted;
+}
 
-.ul-sorting a:hover {
+.sort-a:hover {
   color: #000000;
   border-bottom: #ee3643 1px solid;
 }
@@ -1923,11 +1927,13 @@ footer {
   align-items: center;
   width: 460px;
 }
-
-.icon-dir {
+.ascending,
+.descending {
   display: block;
-  fill: #c5c5c5;
   padding: 10px 17px 10px 0px;
+}
+.icon-dir {
+  fill: #c5c5c5;
 }
 
 .icon-dir:hover {
@@ -1937,6 +1943,7 @@ footer {
 
 .sorting-active {
   fill: #ee3643;
+  cursor: default;
 }
 
 ul .sorting-active {
@@ -1947,7 +1954,7 @@ ul .sorting-active {
 .some-words {
   width: 940px;
   margin: 0 auto;
-  padding: 67px 0 55px;
+  padding: 67px 0 29px;
   margin-top: 46px;
 }
 
@@ -2024,6 +2031,10 @@ ul .sorting-active {
   justify-content: center;
   margin-right: 10px;
 }
+.active-page:hover {
+  cursor: default;
+}
+
 .service-list .active-li {
  background-color: #ffffff;
  color: #32425c;
